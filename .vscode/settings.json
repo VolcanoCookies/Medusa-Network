@@ -1,3 +1,4 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "Medusa-Network"
+	"liveServer.settings.multiRootWorkspaceName": "Medusa-Network",
+	"editor.formatOnSave": true
 }

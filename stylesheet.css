@@ -2,50 +2,57 @@
 
 @import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
 
-body,html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
+body,
+html {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	overflow-x: hidden;
 }
 
 header {
-    background-color: #747474;
-    height: 100px;
+	background-color: #747474;
+	height: 75px;
 }
 
 .page-title {
-    text-align: center;
-    width: 100%;
-    font-family: Rubik;
-    font-size: 3em;
+	text-align: center;
+	width: 100%;
+	font-family: Rubik;
+	font-size: 3em;
+	border-bottom: #040404 solid 3px;
+	padding: 75px 0;
 }
 
 .description-container {
-    display: flex;
-    justify-content: space-around;
+	display: flex;
+	justify-content: space-around;
 }
 
 .description-box {
-    display: inline-block;
-    border: 1px black solid;
-    flex-grow: 1;
-    max-width: 45%;
-    text-align: center;
-
+	display: inline-block;
+	border: 1px black solid;
+	flex-grow: 1;
+	text-align: center;
+	color: black;
+	margin: 0 25px;
 }
 
 .title {
-    
+	font-size: 3em;
+	font-family: rubik;
+	text-decoration: underline;
 }
 
 .subtitle {
-    
+	padding: 0 8%;
 }
 
 footer {
-    background-color: #747474;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
+	border-top: #040404 solid 5px;
+	background-color: #747474;
+	width: 100%;
+	height: 200px;
+	position: static;
+	padding: 50px;
 }
