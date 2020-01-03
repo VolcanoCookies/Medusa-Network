@@ -1,0 +1,16 @@
+<div class="contact-form-container">
+    <h2 class="contact-h2">Contact Directly</h2>
+    <form method="post" action="mailto:volcanocookies@gmail.com" class="contact-form" id="contact-form">
+
+        <p class="contact-form-title">Email Address</p>
+        <input  type="email" name="email" value="Email" id="email-field" class="contact-form-text-field contact-form-email">
+
+        <p class="contact-form-title">Subject</p>
+        <input type="text" name="subject" value="Subject" id="subject-field" class="contact-form-text-field contact-form-subject">
+
+        <p class="contact-form-title">Message</p>
+        <textarea type="text" required name="message" id="message-field" form="contact-form" class="contact-form-text-field contact-form-message">Message</textarea>
+
+        <input type="submit" class="contact-form-submit-button" value="Submit">
+    </form>
+</div>

@@ -57,19 +57,25 @@ header {
 
 .description-box {
 	display: inline-block;
+
 	border: 1px black solid;
-	flex-grow: 1;
+	margin: 0 25px;
+
 	color: black;
 	font-family: Hind;
-	margin: 0 25px;
+
+	flex-grow: 1;
 }
 
 .title {
 	padding: 0 8%;
+
 	font-size: 2em;
-	text-decoration: underline;
 	color: whitesmoke;
+	text-decoration: underline;
 	text-shadow: 0 0 15px black;
+
+	user-select: none;
 }
 
 .subtitle {
@@ -184,6 +190,65 @@ div.profile-picture:hover a.profile-picture {
 	color: #747474;
 	font-weight: 100;
 	font-family: Heebo;
+}
+
+/* Contact */
+
+form.contact {
+	position: relative;
+
+	display: flex;
+
+	flex-wrap: wrap;
+}
+
+form.contact > input,
+textarea {
+	margin: 0 10% 20px 10%;
+
+	width: calc(80% - 1px);
+	flex-grow: 1;
+
+	height: 2em;
+}
+
+form.contact > h2 {
+	margin: 0 10%;
+	color: #a5a5a5;
+	font-family: Heebo;
+	text-shadow: 1px 1px black;
+	user-select: none;
+}
+
+form.contact > textarea {
+	height: 6em;
+}
+
+form.contact > .submit {
+	display: inline-block;
+
+	margin: 10px calc(100% - 1px - 150px - 10%) 20px 10%;
+	height: 35px;
+
+	cursor: pointer;
+
+	font-family: Heebo;
+	font-weight: 700;
+	font-size: 1em;
+
+	background-color: greenyellow;
+	border: 1px solid rgb(180, 180, 180);
+
+	transition: background 0.2s;
+}
+
+form.contact > .submit:hover {
+	background-color: rgb(203, 253, 128);
+}
+
+iframe.discord {
+	display: block;
+	margin: auto;
 }
 
 /* Footer */
