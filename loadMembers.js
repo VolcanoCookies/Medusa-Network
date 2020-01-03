@@ -16,7 +16,7 @@ window.addEventListener(
 			receivedTemplate
 		);
 
-		getAsync('https://api.myjson.com/bins/i0vg4', receivedList);
+		getAsync('https://api.myjson.com/bins/11o6es', receivedList);
 	},
 	false
 );
@@ -66,7 +66,7 @@ function createMember(member) {
 	var name = member.name;
 	var title = member.title;
 	var description = member.description;
-	var image = member.picture;
+	var picture = member.picture;
 	var link = member.link;
 
 	var element = document.createElement('project');
@@ -79,7 +79,7 @@ function createMember(member) {
 	element.innerHTML = html;
 
 	console.log(
-		'Title: ' + title + '\nDesciption: ' + description + '\nImage: ' + image
+		'Title: ' + title + '\nDesciption: ' + description + '\nImage: ' + picture
 	);
 	console.log(element.innerHTML);
 
