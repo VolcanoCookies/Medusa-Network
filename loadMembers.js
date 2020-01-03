@@ -3,44 +3,66 @@
 var membersContainer;
 var members;
 
-var template = '';
+var template;
+var jsonText;
 
 window.addEventListener(
 	'DOMContentLoaded',
 	function() {
 		membersContainer = document.getElementById('members-list');
 
-		var template = Get(
-			'https://raw.githubusercontent.com/VolcanoCookies/Medusa-Network/master/templates/memberTemplate.html'
+		getAsync(
+			'https://raw.githubusercontent.com/VolcanoCookies/Medusa-Network/master/templates/memberTemplate.html',
+			receivedTemplate
 		);
 
-		var jsonText = Get(
-			'https://raw.githubusercontent.com/VolcanoCookies/Medusa-Network/master/members.json'
+		getAsync(
+			'https://raw.githubusercontent.com/VolcanoCookies/Medusa-Network/master/members.json',
+			receivedList
 		);
-
-		var regex = new RegExp('(^| )//.*|^$');
-
-		jsonText = jsonText.replace(regex, '');
-		jsonText.replace();
-
-		console.log(jsonText);
-
-		members = JSON.parse(jsonText);
-
-		for (i in members.member) {
-			var member = members.members[i];
-
-			createMember(member);
-		}
 	},
 	false
 );
 
-function Get(yourUrl) {
-	var Httpreq = new XMLHttpRequest(); // a new request
-	Httpreq.open('GET', yourUrl, false);
-	Httpreq.send(null);
-	return Httpreq.responseText;
+function receivedTemplate(response) {
+	template = response;
+
+	if (jsonText != undefined) {
+		populateList();
+	}
+}
+
+function receivedList(response) {
+	jsonText = response;
+
+	if (template != undefined) {
+		populateList();
+	}
+}
+
+function populateList() {
+	var regex = new RegExp('(^| )//.*|^$');
+
+	jsonText = jsonText.replace(regex, '');
+	jsonText.replace();
+
+	members = JSON.parse(jsonText);
+
+	for (i in members.members) {
+		var member = members.members[i];
+
+		createMember(member);
+	}
+}
+
+function getAsync(url, callback) {
+	var xmlHttp = new XMLHttpRequest();
+	xmlHttp.onreadystatechange = function() {
+		if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+			callback(xmlHttp.responseText);
+	};
+	xmlHttp.open('GET', url, true); // true for asynchronous
+	xmlHttp.send(null);
 }
 
 function createMember(member) {
