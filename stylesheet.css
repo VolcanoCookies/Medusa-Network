@@ -68,6 +68,8 @@ header {
 	padding: 0 8%;
 	font-size: 2em;
 	text-decoration: underline;
+	color: whitesmoke;
+	text-shadow: 0 0 15px black;
 }
 
 .subtitle {
