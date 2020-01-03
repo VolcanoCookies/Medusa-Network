@@ -13,50 +13,10 @@ html {
 header {
 }
 
-/* Navigation */
-
-.nav {
-	position: absolute;
-	width: 100%;
-}
-
-.nav-list {
-	display: flex;
-	list-style: none;
-	justify-content: space-around;
-}
-
-.nav-item {
-	display: inline-block;
-
-	font-family: Hind;
-	text-align: center;
-	font-size: 1.75em;
-
-	flex-grow: 1;
-}
-
-.nav-item:visited,
-.nav-item a {
-	text-decoration: none;
-	color: whitesmoke;
-}
-
-.nav-item > a:hover {
-	cursor: pointer;
-}
-
-.nav-item-div {
-	position: relative;
-	display: inline-block;
-}
-
-/*----------*/
-
 .banner-span {
 	display: block;
 	height: 700px;
-	background-image: url('images/Level\ Winter\ War.png');
+	background-image: url('images/Level\ Winter\ War\ blur.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
