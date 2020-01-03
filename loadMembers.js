@@ -1,6 +1,6 @@
 // JavaScript Document
 
-var memberContainer;
+var membersContainer;
 var members;
 
 var template = '';
@@ -8,7 +8,7 @@ var template = '';
 window.addEventListener(
 	'DOMContentLoaded',
 	function() {
-		memberContainer = document.getElementById('members-list');
+		membersContainer = document.getElementById('members-list');
 
 		var template = Get(
 			'https://raw.githubusercontent.com/VolcanoCookies/Medusa-Network/master/templates/memberTemplate.html'
@@ -51,10 +51,10 @@ function createMember(project) {
 
 	var element = document.createElement('project');
 	var html = template.trim();
-	html = html.replace('project_title', title);
-	html = html.replace('project_description', description);
-	html = html.replace('project_image', image);
-	html = html.replace('project_link', link);
+	html = html.replace('member_name', title);
+	html = html.replace('member_title', description);
+	html = html.replace('member_description', image);
+	html = html.replace('member_image', link);
 
 	element.innerHTML = html;
 
@@ -63,5 +63,5 @@ function createMember(project) {
 	);
 	console.log(element.innerHTML);
 
-	projectContainer.innerHTML += element.innerHTML;
+	membersContainer.innerHTML += element.innerHTML;
 }
