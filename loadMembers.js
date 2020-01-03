@@ -66,7 +66,7 @@ function createMember(member) {
 	var name = member.name;
 	var title = member.title;
 	var description = member.description;
-	var image = member.image;
+	var image = member.picture;
 	var link = member.link;
 
 	var element = document.createElement('project');
@@ -74,7 +74,7 @@ function createMember(member) {
 	html = html.replace('member_name', name);
 	html = html.replace('member_title', title);
 	html = html.replace('member_description', description);
-	html = html.replace('member_image', image);
+	html = html.replace('member_picture', picture);
 
 	element.innerHTML = html;
 
