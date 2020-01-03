@@ -43,11 +43,11 @@ function Get(yourUrl) {
 	return Httpreq.responseText;
 }
 
-function createMember(project) {
-	var title = project.title;
-	var description = project.description;
-	var image = project.image;
-	var link = project.link;
+function createMember(member) {
+	var title = member.title;
+	var description = member.description;
+	var image = member.image;
+	var link = member.link;
 
 	var element = document.createElement('project');
 	var html = template.trim();
