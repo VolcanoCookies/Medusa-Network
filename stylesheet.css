@@ -69,3 +69,7 @@ footer {
 	height: 150px;
 	position: static;
 }
+
+.footer-text {
+	color: whitesmoke;
+}
