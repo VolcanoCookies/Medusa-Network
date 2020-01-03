@@ -11,19 +11,21 @@ html {
 }
 
 header {
+	position: relative;
 }
+
+/* General */
 
 .banner-span {
 	display: block;
-	height: 700px;
 	background-image: url('images/Level\ Winter\ War\ blur.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
 .page-title {
 	position: relative;
-	top: 300px;
 	margin: auto;
 	text-align: center;
 	color: whitesmoke;
@@ -33,9 +35,19 @@ header {
 	border-top: 2px solid whitesmoke;
 	border-bottom: 2px solid whitesmoke;
 	text-shadow: #040404 3px 3px 5px;
-	width: 12em;
 	padding: 10px;
 	user-select: none;
+}
+
+/* Home Page */
+
+.home.banner-span {
+	height: 700px;
+}
+
+.home.page-title {
+	top: 300px;
+	width: 12em;
 }
 
 .description-container {
@@ -61,6 +73,46 @@ header {
 .subtitle {
 	padding: 0 8%;
 }
+
+/* Members page */
+
+.members.banner-span {
+	height: 400px;
+}
+
+.members.page-title {
+	top: 160px;
+	width: 8em;
+}
+
+.members-span {
+}
+
+.members-list {
+	text-decoration: none;
+
+	padding: 10px 50px;
+
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+
+	list-style: none;
+}
+
+.member-item {
+	background-color: red;
+
+	margin: 20px;
+
+	width: calc(100% * (1 / 3) - 11px);
+	max-width: 500px;
+	height: 200px;
+
+	flex-grow: 1;
+}
+
+/* Footer */
 
 footer {
 	border-top: #040404 solid 5px;

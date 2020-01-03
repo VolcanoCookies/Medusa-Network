@@ -14,40 +14,41 @@
 					   initial-scale=1.0"
 		/>
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-		<script src="nav.js"></script>
+		<script src="loadModules.js"></script>
 	</head>
 	<body>
 		<header>
-			<!-- Create nav.html and insert on page load like in portfolio website -->
+			<!-- Modular nav -->
 			<div id="nav-placeholder"></div>
 		</header>
 		<main>
-			<span class="banner-span" id="banner-span">
-				<h1 class="page-title">Medusa Network</h1>
+			<span class="members banner-span">
+				<h1 class="members page-title">Members</h1>
 			</span>
 
-			<span class="description-container">
-				<div class="description-box">
-					<h2 class="title">Who we are</h2>
-					<p class="subtitle">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-						faucibus justo sed est condimentum fermentum. In hac habitasse
-						platea dictumst. Proin feugiat congue felis at pellentesque. Vivamus
-						sit amet ipsum dolor.
-					</p>
-				</div>
-				<div class="description-box">
-					<h2 class="title">What we do</h2>
-					<p class="subtitle">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-						faucibus justo sed est condimentum fermentum. In hac habitasse
-						platea dictumst. Proin feugiat congue felis at pellentesque. Vivamus
-						sit amet ipsum dolor.
-					</p>
-				</div>
+			<span class="members-span">
+				<ul class="members-list" id="members-list">
+					<li class="member-item">
+						<!-- Modular member item -->
+						<img src="" alt="profile picture " id="profile-pic" />
+					</li>
+					<li class="member-item">
+						<!-- Modular member item -->
+					</li>
+					<li class="member-item">
+						<!-- Modular member item -->
+					</li>
+					<li class="member-item">
+						<!-- Modular member item -->
+					</li>
+					<li class="member-item">
+						<!-- Modular member item -->
+					</li>
+				</ul>
 			</span>
 		</main>
 
+		<!-- Modular footer -->
 		<footer>
 			<div id="footer-placeholder"></div>
 		</footer>
