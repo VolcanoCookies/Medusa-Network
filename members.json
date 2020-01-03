@@ -1,0 +1,16 @@
+{
+	"projects": [
+		{
+			"title": "NPC Creator",
+			"description": "A tool to ease in the making of npcs for the game Unturned.",
+			"image": "images/BTW Icon.png",
+			"link": "https://github.com/VolcanoCookies/UnturnedNPCCreator"
+		},
+		{
+			"title": "Portfolio Website",
+			"description": "This website that you are browsing, made not only to showcase my work or for a easy way of contacting me but also as a fun sideproject for myself to train ons some niche coding.",
+			"image": "images/Website.png",
+			"link": "https://github.com/VolcanoCookies/Portfolio-Website"
+		}
+	]
+}
