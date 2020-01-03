@@ -187,13 +187,33 @@ div.profile-picture:hover a.profile-picture {
 /* Footer */
 
 footer {
-	border-top: #040404 solid 5px;
-	background-color: #747474;
+	border-top: #040404 solid 2px;
+	background-color: #585858;
+
+	color: whitesmoke;
+	font-family: Heebo;
+	font-size: 1em;
+
 	width: 100%;
-	height: 150px;
-	position: static;
+	height: 75px;
+
+	display: flex;
 }
 
 .footer-text {
+	text-decoration: none;
+	text-shadow: 2px 2px 2px black;
+
+	margin: auto;
+
+	user-select: none;
+}
+
+a.footer-text:visited {
 	color: whitesmoke;
+}
+
+a.footer-text:hover {
+	color: #a5a5a5;
+	text-shadow: 3px 3px 2px black;
 }

@@ -81,10 +81,5 @@ function createMember(member) {
 
 	element.innerHTML = html;
 
-	console.log(
-		'Title: ' + title + '\nDesciption: ' + description + '\nImage: ' + picture
-	);
-	console.log(element.innerHTML);
-
 	membersContainer.innerHTML += element.innerHTML;
 }
