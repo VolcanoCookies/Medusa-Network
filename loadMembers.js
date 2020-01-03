@@ -16,7 +16,10 @@ window.addEventListener(
 			receivedTemplate
 		);
 
-		getAsync('https://api.myjson.com/bins/11o6es', receivedList);
+		getAsync(
+			'https://raw.githubusercontent.com/VolcanoCookies/Medusa-Network/master/members.json',
+			receivedList
+		);
 	},
 	false
 );
