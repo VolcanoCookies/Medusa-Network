@@ -1,6 +1,6 @@
 /* CSS Document */
 
-@import url('https://fonts.googleapis.com/css?family=Rubik|Hind:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik|Hind:700|Hind:400&display=swap');
 
 body,
 html {
@@ -12,6 +12,46 @@ html {
 
 header {
 }
+
+/* Navigation */
+
+.nav {
+	position: absolute;
+	width: 100%;
+}
+
+.nav-list {
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+}
+
+.nav-item {
+	display: inline-block;
+
+	font-family: Hind;
+	text-align: center;
+	font-size: 1.75em;
+
+	flex-grow: 1;
+}
+
+.nav-item:visited,
+.nav-item a {
+	text-decoration: none;
+	color: whitesmoke;
+}
+
+.nav-item > a:hover {
+	cursor: pointer;
+}
+
+.nav-item-div {
+	position: relative;
+	display: inline-block;
+}
+
+/*----------*/
 
 .banner-span {
 	display: block;
