@@ -118,6 +118,8 @@ header {
 	height: 200px;
 
 	flex-grow: 1;
+
+	user-select: none;
 }
 
 .profile-picture {
