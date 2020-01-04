@@ -3,6 +3,8 @@
 var membersContainer;
 var members;
 
+var background;
+
 var template;
 var jsonText;
 
@@ -10,6 +12,7 @@ window.addEventListener(
 	'DOMContentLoaded',
 	function() {
 		membersContainer = document.getElementById('members-list');
+		background = document.getElementById('members-banner-span');
 
 		getAsync(
 			'https://raw.githubusercontent.com/VolcanoCookies/Medusa-Network/master/templates/memberTemplate.html',
@@ -48,11 +51,23 @@ function populateList() {
 
 	members = JSON.parse(jsonText);
 
+	var backgroundString = '';
+
 	for (i in members.members) {
 		var member = members.members[i];
 
 		createMember(member);
+
+		backgroundString += 'url("' + member.picture + '"), ';
 	}
+
+	backgroundString = backgroundString.substring(0, backgroundString.length - 2);
+
+	background.style.backgroundImage = backgroundString;
+
+	console.log(backgroundString);
+
+	console.log(background.style.backgroundImage);
 }
 
 function getAsync(url, callback) {
