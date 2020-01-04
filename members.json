@@ -18,7 +18,21 @@
 			"name": "Burning Bubbles",
 			"title": "Modder",
 			"description": "Avid Historian.",
-			"picture": "",
+			"picture": "images/profile pictures/burningbubbles.png",
+			"link": ""
+		},
+		{
+			"name": "Milsim",
+			"title": "Modder / Clothing",
+			"description": "Self-proclaimed king of uniforms.",
+			"picture": "images/profile pictures/milsim.png",
+			"link": ""
+		},
+		{
+			"name": "Felipe",
+			"title": "Modeller",
+			"description": "Sample description.",
+			"picture": "images/profile pictures/felipe.png",
 			"link": ""
 		}
 	]
