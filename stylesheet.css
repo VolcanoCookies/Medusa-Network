@@ -86,6 +86,9 @@ header {
 
 .members.banner-span {
 	height: 400px;
+	background-repeat: repeat;
+	background-size: 12.5%;
+	background-position: top left;
 }
 
 .members.page-title {
