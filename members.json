@@ -6,6 +6,13 @@
 			"description": "Hi there fellow humans, how do you do.",
 			"picture": "images/profile pictures/Volcano.png",
 			"link": "https://github.com/VolcanoCookies/UnturnedNPCCreator"
+		},
+		{
+			"name": "Mr. Tiger",
+			"title": "Owner",
+			"description": "Sample description.",
+			"picture": "images/profile pictures/mrtiger.png",
+			"link": ""
 		}
 	]
 }
