@@ -8,58 +8,49 @@ var ctx;
 
 var template;
 var jsonText;
-var placeholder;
 
 var callsProcessed = 0;
+
+var urls = [
+	'https://raw.githubusercontent.com/VolcanoCookies/Medusa-Network/master/templates/memberTemplate.html',
+	'https://raw.githubusercontent.com/VolcanoCookies/Medusa-Network/master/members.json',
+	'https://api.github.com/repositories/231226489/contents/images/profile%20pictures'
+];
+
+urls.forEach(url => {
+	getAsync(url, context => response(context, url));
+});
+
+function response(responseText, url) {
+	switch (url) {
+		case urls[0]:
+			template = responseText;
+			callsProcessed++;
+			break;
+		case urls[1]:
+			jsonText = responseText;
+			callsProcessed++;
+			break;
+		case urls[2]:
+			callsProcessed++;
+			loadImages(responseText);
+			break;
+		default:
+			break;
+	}
+
+	if (callsProcessed === urls.length) populateList();
+}
 
 $(window).on('ready', function() {
 	membersContainer = document.getElementById('members-list');
 	background = document.getElementById('members-banner-span');
-
-	getAsync(
-		'https://raw.githubusercontent.com/VolcanoCookies/Medusa-Network/master/templates/memberTemplate.html',
-		receivedTemplate
-	);
-
-	getAsync(
-		'https://raw.githubusercontent.com/VolcanoCookies/Medusa-Network/master/members.json',
-		receivedList
-	);
-
-	getAsync(
-		'https://raw.githubusercontent.com/VolcanoCookies/Medusa-Network/master/images/profile%20pictures/Volcano.png',
-		receivedPlaceholderPicture
-	);
-
 	canvas = document.getElementById('canvas');
 
 	canvas.width = parent.innerWidth;
 	canvas.height = 400;
 	ctx = canvas.getContext('2d');
-
-	loadImages();
 });
-
-function receivedTemplate(response) {
-	template = response;
-	callsProcessed++;
-
-	if (callsProcessed == 3) populateList();
-}
-
-function receivedList(response) {
-	jsonText = response;
-	callsProcessed++;
-
-	if (callsProcessed == 3) populateList();
-}
-
-function receivedPlaceholderPicture(response) {
-	placeholder = response;
-	callsProcessed++;
-
-	if (callsProcessed == 3) populateList();
-}
 
 function populateList() {
 	var regex = new RegExp('(^| )//.*|^$');
@@ -96,7 +87,8 @@ function createMember(member) {
 	var link = member.link;
 
 	if (picture == '') {
-		picture = placeholder;
+		picture =
+			'https://raw.githubusercontent.com/VolcanoCookies/Medusa-Network/master/images/profile%20pictures/Volcano.png';
 	}
 
 	var element = document.createElement('project');
@@ -150,25 +142,27 @@ function randomPattern(imgWidth, imgHeight, areaWidth, areaHeight) {
 	return patternCtx.createPattern(patternCanvas, 'repeat');
 }
 
-function loadImages() {
-	var imagesToLoad = 20;
-	for (var i = 0; i < imagesToLoad; i++) {
+function loadImages(pictures) {
+	var json = JSON.parse(pictures);
+
+	json.forEach(i => {
 		var image = new Image();
 		image.onload = function() {
 			imagesLoaded.push(this);
-			if (imagesLoaded.length === imagesToLoad) {
+			if (imagesLoaded.length === json.length) {
 				draw();
 			}
 		};
-		image.src = 'http://lorempixel.com/50/50?' + i;
-	}
+		image.src = i.download_url;
+	});
 }
 
 function draw() {
 	//create the random pattern (should be moved out of the draw)
-	var patt = randomPattern(100, 100);
+	var patt = randomPattern(200, 200);
 	ctx.fillStyle = patt;
 	ctx.beginPath();
-	ctx.rect(0, 0, 2000, 700);
+	ctx.rect(-205, -205, window.innerWidth + 205, 700);
+	ctx.filter = 'blur(4px)';
 	ctx.fill();
 }
