@@ -1,17 +1,24 @@
 {
 	"members": [
 		{
+			"name": "Mr. Tiger",
+			"title": "Owner",
+			"description": "By The Community For The Community",
+			"picture": "images/profile pictures/mrtiger.png",
+			"link": ""
+		},
+		{
 			"name": "Volcano",
 			"title": "Website Developer",
 			"description": "Hi there fellow humans, how do you do.",
 			"picture": "images/profile pictures/Volcano.png",
-			"link": "https://github.com/VolcanoCookies/UnturnedNPCCreator"
+			"link": "https://github.com/VolcanoCookies/"
 		},
 		{
-			"name": "Mr. Tiger",
-			"title": "Owner",
-			"description": "Sample description.",
-			"picture": "images/profile pictures/mrtiger.png",
+			"name": "Burning Bubbles",
+			"title": "Modder",
+			"description": "Avid Historian.",
+			"picture": "",
 			"link": ""
 		}
 	]
