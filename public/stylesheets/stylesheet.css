@@ -18,7 +18,7 @@ header {
 
 .banner-span {
 	display: block;
-	background-image: url('images/Level\ Winter\ War\ blur.png');
+	background-image: url('../images/Level\ Winter\ War\ blur.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -59,7 +59,7 @@ header {
 	display: inline-block;
 
 	border: 1px black solid;
-	margin: 0 25px;
+	margin: 25px;
 
 	color: black;
 	font-family: Hind;
@@ -80,6 +80,12 @@ header {
 
 .subtitle {
 	padding: 0 8%;
+
+	font-family: Heebo;
+	font-weight: 700;
+	font-size: 1.25em;
+
+	color: #747474;
 }
 
 /* Members page */
@@ -254,6 +260,24 @@ form.contact > .submit:hover {
 iframe.discord {
 	display: block;
 	margin: auto;
+}
+
+/* Services */
+
+.services.banner-span {
+	height: 400px;
+}
+
+.services.page-title {
+	top: 150px;
+	width: 7em;
+}
+
+.service {
+	background-color: red;
+
+	width: 100%;
+	height: 700px;
 }
 
 /* Footer */
